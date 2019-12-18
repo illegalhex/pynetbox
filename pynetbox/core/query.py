@@ -285,8 +285,8 @@ class Request(object):
                     # paginated, thus far.
                     if first_run:
                         req = self._make_call(add_params={
-                            "limit": req["count"],
-                            "offset": len(req["results"])
+                            "limit": 100,
+                            "offset": 100
                         })
                     else:
                         req = self._make_call(url_override=req["next"])
